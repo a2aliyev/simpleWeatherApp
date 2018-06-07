@@ -36,11 +36,13 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call call, IOException e) {
 
             }
-
+//C:\Users\aydin.aliyev\Documents\android-samples-master\tutorials\Stormy\app
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 try{
                     if(response.isSuccessful()){
+                        assert response.body() != null;
+                        assert response.body() != null;
                         Log.d(TAG,response.body().string());
                     }
                 } catch (IOException e){
